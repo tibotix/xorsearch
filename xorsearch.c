@@ -188,6 +188,9 @@ void print_usage_and_exit(char** argv) {
     exit(EXIT_FAILURE);
 }
 
+// TODO: print more data encrypted in the found scheme following the pattern (e.g. pattern:flag{ -> print:flag{xxxxxxxxxx})
+//       -> maybe until next newline or nullbyte if in specified range (e.g. must be in the next 20 bytes)
+// TODO: filter for matches that end with a newline or null byte
 int main(int argc, char** argv) {
     int case1 = 0;
     int case2 = 0;
@@ -212,7 +215,6 @@ int main(int argc, char** argv) {
     if (optind < argc) {
         filename = argv[optind++];
     }
-    // debugf("filename: %p", filename);
 
     if (filename == NULL || pattern == NULL) {
         print_usage_and_exit(argv);
