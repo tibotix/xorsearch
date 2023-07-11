@@ -1,0 +1,5 @@
+.gdb_history
+.vscode/
+sample_files/
+xorsearch
+xorsearch.o
