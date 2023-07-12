@@ -1,4 +1,4 @@
 CC = gcc
-CFLAGS = -g -Wall
+CFLAGS = -Wall
 
 xorsearch: xorsearch.o
